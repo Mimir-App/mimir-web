@@ -197,22 +197,23 @@
         <div class="download-card">
           <h3>.deb</h3>
           <p>Para Ubuntu, Debian y derivados</p>
-          <a href="mailto:jlorenzolimon@gmail.com?subject=Solicitud%20descarga%20Mimir%20.deb" class="btn btn-primary">Solicitar acceso</a>
+          <a href="https://github.com/Mimir-App/mimir-app/releases/latest" class="btn btn-primary" target="_blank" rel="noopener">Descargar</a>
         </div>
         <div class="download-card">
           <h3>.AppImage</h3>
           <p>Ejecutable universal, sin instalar</p>
-          <a href="mailto:jlorenzolimon@gmail.com?subject=Solicitud%20descarga%20Mimir%20AppImage" class="btn btn-primary">Solicitar acceso</a>
+          <a href="https://github.com/Mimir-App/mimir-app/releases/latest" class="btn btn-primary" target="_blank" rel="noopener">Descargar</a>
         </div>
       </div>
 
       <div class="install-steps">
         <h3>Instalacion rapida</h3>
         <div class="code-block">
-          <code># 1. Instalar la app<br>
-sudo dpkg -i mimir_0.2.0_amd64.deb<br><br>
-# 2. Instalar el servicio de captura<br>
-bash install-daemon.sh<br><br>
+          <code># 1. Instalar la app (incluye mimir-server)<br>
+sudo apt install ./mimir_0.2.0_amd64.deb<br><br>
+# 2. Opcional: instalar captura automatica<br>
+sudo apt install ./mimir-capture_0.2.0_amd64.deb<br>
+systemctl --user enable --now mimir-capture<br><br>
 # 3. Verificar<br>
 curl http://127.0.0.1:9476/health</code>
         </div>
