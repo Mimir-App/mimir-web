@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mimir — Asistente inteligente de gestion del tiempo</title>
+  <meta name="description" content="Captura automaticamente tu actividad, sugiere descripciones con IA y permite imputar horas a cualquier sistema de gestion.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <!-- Nav -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="#" class="nav-logo">
+        <svg class="nav-icon" viewBox="0 0 32 32" width="28" height="28">
+          <g transform="translate(16,16)">
+            <path d="M-14,0 Q-7,-9 0,-10 Q7,-9 14,0 Q7,9 0,10 Q-7,9 -14,0Z" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="0" cy="0" r="5.5" fill="#cb1b21" opacity="0.9"/>
+            <circle cx="0" cy="0" r="2.2" fill="currentColor"/>
+            <circle cx="-1.5" cy="-1.5" r="1" fill="white" opacity="0.3"/>
+          </g>
+        </svg>
+        <span>Mimir</span>
+      </a>
+      <div class="nav-links">
+        <a href="#features">Funcionalidades</a>
+        <a href="#architecture">Arquitectura</a>
+        <a href="#download">Descargar</a>
+        <a href="#server">Server</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          Tu tiempo,<br>
+          <span class="accent">bien invertido.</span>
+        </h1>
+        <p class="hero-subtitle">
+          Mimir captura automaticamente tu actividad, sugiere descripciones con IA, gestiona tus tareas y te permite imputar horas a cualquier sistema de gestion. Todo desde una unica aplicacion de escritorio.
+        </p>
+        <div class="hero-badges">
+          <span class="hero-badge privacy">&#x1F512; Tus datos nunca salen de tu ordenador</span>
+          <span class="hero-badge light">&#x1F3AF; Poco invasivo, trabaja en segundo plano</span>
+        </div>
+        <div class="hero-actions">
+          <a href="#download" class="btn btn-primary">Descargar para Linux</a>
+          <a href="#features" class="btn btn-secondary">Ver funcionalidades</a>
+        </div>
+        <p class="hero-note">v0.2.0 — Linux (Ubuntu 22.04+)</p>
+      </div>
+      <div class="hero-visual">
+        <div class="app-preview">
+          <div class="preview-sidebar">
+            <div class="preview-logo"></div>
+            <div class="preview-nav-item active"></div>
+            <div class="preview-nav-item"></div>
+            <div class="preview-nav-item"></div>
+            <div class="preview-nav-item"></div>
+            <div class="preview-nav-item"></div>
+          </div>
+          <div class="preview-body">
+            <div class="preview-header"></div>
+            <div class="preview-cards">
+              <div class="preview-card small"></div>
+              <div class="preview-card wide"></div>
+              <div class="preview-card wide"></div>
+              <div class="preview-card small"></div>
+              <div class="preview-card full"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="features">
+    <div class="container">
+      <h2 class="section-title">Funcionalidades</h2>
+      <p class="section-subtitle">Todo lo que necesitas para gestionar tu jornada laboral en un solo lugar</p>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">&#x1F441;</div>
+          <h3>Captura automatica</h3>
+          <p>Detecta ventana activa, proyecto git y rama en segundo plano. Silencioso, ligero y poco invasivo — ni lo notaras.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#x2713;</div>
+          <h3>Revision del dia</h3>
+          <p>Edita, confirma y envia bloques de actividad a tu sistema de gestion. Control total sobre lo que imputas.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#x2728;</div>
+          <h3>Descripciones con IA</h3>
+          <p>Genera descripciones automaticas con Gemini, Claude u OpenAI. Configurable por perfil y contexto.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#x1F4CA;</div>
+          <h3>Dashboard interactivo</h3>
+          <p>Widgets arrastrables con progreso dia, semana y mes. Fichaje de jornada integrado.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#x1F4CB;</div>
+          <h3>Parte de horas</h3>
+          <p>Vista de timesheets agrupable por fecha, semana, proyecto o tarea. Con formatos configurables.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#x1F500;</div>
+          <h3>Integraciones extensibles</h3>
+          <p>Conecta con Odoo, GitLab y mas. Arquitectura de adaptadores preparada para cualquier servicio.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#x2699;</div>
+          <h3>Totalmente configurable</h3>
+          <p>Formatos, temas, zoom, objetivos semanales, columnas redimensionables. Todo a tu medida.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#x1F512;</div>
+          <h3>100% local y privado</h3>
+          <p>Sin servidores externos, sin telemetria, sin rastreo. Tu base de datos, tus tokens, todo en tu maquina. Nada sale de tu ordenador.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Architecture -->
+  <section id="architecture" class="architecture">
+    <div class="container">
+      <h2 class="section-title">Arquitectura</h2>
+      <p class="section-subtitle">Dos procesos independientes, una experiencia fluida</p>
+
+      <div class="arch-grid">
+        <div class="arch-card">
+          <div class="arch-badge capture">Capture :9476</div>
+          <h3>mimir-capture</h3>
+          <p>Servicio systemd que corre siempre en background. Captura la actividad del escritorio via xdotool y D-Bus, y escribe bloques en SQLite.</p>
+          <ul>
+            <li>Poller cada 30 segundos</li>
+            <li>Deteccion de proyecto git</li>
+            <li>Tray icon con control de modo</li>
+            <li>Recuperacion tras crash</li>
+          </ul>
+        </div>
+        <div class="arch-card">
+          <div class="arch-badge server">Server :9477</div>
+          <h3>mimir-server</h3>
+          <p>API FastAPI lanzada por la app al abrirse. Gestiona integraciones con sistemas de gestion, repositorios y proveedores de IA.</p>
+          <ul>
+            <li>CRUD de bloques</li>
+            <li>Integraciones extensibles</li>
+            <li>Scoring y priorizacion</li>
+            <li>Descripciones con IA</li>
+          </ul>
+        </div>
+        <div class="arch-card">
+          <div class="arch-badge app">App Tauri</div>
+          <h3>Frontend</h3>
+          <p>Aplicacion de escritorio construida con Tauri 2 + Vue 3. Interfaz moderna con tema oscuro y claro.</p>
+          <ul>
+            <li>Vue 3 + TypeScript</li>
+            <li>Componentes reutilizables</li>
+            <li>Keyring para tokens</li>
+            <li>Dashboard personalizable</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tech-stack">
+        <span class="tech-tag">Tauri 2</span>
+        <span class="tech-tag">Vue 3</span>
+        <span class="tech-tag">TypeScript</span>
+        <span class="tech-tag">Rust</span>
+        <span class="tech-tag">Python</span>
+        <span class="tech-tag">FastAPI</span>
+        <span class="tech-tag">SQLite</span>
+        <span class="tech-tag">asyncio</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download -->
+  <section id="download" class="download">
+    <div class="container download-inner">
+      <h2 class="section-title">Descargar</h2>
+      <p class="section-subtitle">Disponible para Linux</p>
+
+      <div class="download-cards">
+        <div class="download-card">
+          <h3>.deb</h3>
+          <p>Para Ubuntu, Debian y derivados</p>
+          <a href="mailto:jesus.lorenzo@factorlibre.com?subject=Solicitud%20descarga%20Mimir%20.deb" class="btn btn-primary">Solicitar acceso</a>
+        </div>
+        <div class="download-card">
+          <h3>.AppImage</h3>
+          <p>Ejecutable universal, sin instalar</p>
+          <a href="mailto:jesus.lorenzo@factorlibre.com?subject=Solicitud%20descarga%20Mimir%20AppImage" class="btn btn-primary">Solicitar acceso</a>
+        </div>
+      </div>
+
+      <div class="install-steps">
+        <h3>Instalacion rapida</h3>
+        <div class="code-block">
+          <code># 1. Instalar la app<br>
+sudo dpkg -i mimir_0.2.0_amd64.deb<br><br>
+# 2. Instalar el servicio de captura<br>
+bash install-daemon.sh<br><br>
+# 3. Verificar<br>
+curl http://127.0.0.1:9476/health</code>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mimir Server -->
+  <section id="server" class="server-section">
+    <div class="container">
+      <div class="wip-banner">
+        <span class="wip-badge">En desarrollo</span>
+      </div>
+      <h2 class="section-title">Mimir Server</h2>
+      <p class="section-subtitle">Servidor central para equipos y empresas</p>
+
+      <div class="server-grid">
+        <div class="server-info">
+          <p class="server-desc">
+            Mimir Server permitira a las organizaciones gestionar las integraciones, licencias y configuraciones de forma centralizada. Cada empleado usara la app de escritorio con la configuracion que su empresa haya definido, <strong>sin que ningun dato personal sea visible para la administracion.</strong>
+          </p>
+          <ul class="server-features">
+            <li>Panel de administracion centralizado</li>
+            <li>Gestion de integraciones por empresa (Odoo, GitLab, GitHub...)</li>
+            <li>Configuracion de etiquetas de prioridad y scoring</li>
+            <li>Dashboards agregados por equipo y departamento</li>
+            <li>Control de licencias y servicios habilitados</li>
+            <li>Despliegue on-premise o en la nube</li>
+          </ul>
+        </div>
+        <div class="server-visual">
+          <div class="server-preview">
+            <div class="sp-header">
+              <span class="sp-dot"></span>
+              <span class="sp-dot"></span>
+              <span class="sp-dot"></span>
+              <span class="sp-title">Mimir Server — Admin</span>
+            </div>
+            <div class="sp-body">
+              <div class="sp-sidebar">
+                <div class="sp-nav-item active"></div>
+                <div class="sp-nav-item"></div>
+                <div class="sp-nav-item"></div>
+                <div class="sp-nav-item"></div>
+              </div>
+              <div class="sp-content">
+                <div class="sp-row"></div>
+                <div class="sp-row short"></div>
+                <div class="sp-cards">
+                  <div class="sp-card"></div>
+                  <div class="sp-card"></div>
+                  <div class="sp-card"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="server-cta">
+        <p>¿Interesado en Mimir Server para tu empresa?</p>
+        <a href="mailto:jesus.lorenzo@factorlibre.com" class="btn btn-secondary">Contactar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <span class="footer-logo">Mimir</span>
+        <span class="footer-copy">Jesus Lorenzo Limon</span>
+      </div>
+      <div class="footer-links">
+        <a href="#features">Funcionalidades</a>
+        <a href="#download">Descargar</a>
+        <a href="#server">Server</a>
+        <a href="mailto:jesus.lorenzo@factorlibre.com">Contacto</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
