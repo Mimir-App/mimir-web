@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Politica de Privacidad — Mimir</title>
+  <meta name="description" content="Politica de privacidad de Mimir, asistente inteligente de gestion del tiempo.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <!-- Nav -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="/" class="nav-logo">
+        <svg class="nav-icon" viewBox="0 0 32 32" width="28" height="28">
+          <g transform="translate(16,16)">
+            <path d="M-14,0 Q-7,-9 0,-10 Q7,-9 14,0 Q7,9 0,10 Q-7,9 -14,0Z" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="0" cy="0" r="5.5" fill="#cb1b21" opacity="0.9"/>
+            <circle cx="0" cy="0" r="2.2" fill="currentColor"/>
+            <circle cx="-1.5" cy="-1.5" r="1" fill="white" opacity="0.3"/>
+          </g>
+        </svg>
+        <span>Mimir</span>
+      </a>
+      <div class="nav-links">
+        <a href="/">Inicio</a>
+        <a href="/#features">Funcionalidades</a>
+        <a href="/#download">Descargar</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Content -->
+  <section class="legal-page">
+    <div class="container legal-container">
+      <h1 class="legal-title">Politica de Privacidad</h1>
+      <p class="legal-updated">Ultima actualizacion: 24 de marzo de 2025</p>
+
+      <div class="legal-body">
+        <h2>1. Introduccion</h2>
+        <p>Mimir es una aplicacion de escritorio de codigo abierto para la gestion inteligente del tiempo. Esta politica de privacidad explica como se recopilan, utilizan y protegen tus datos al usar Mimir.</p>
+        <p><strong>Principio fundamental:</strong> Mimir esta diseñado para que tus datos permanezcan en tu ordenador. No operamos servidores que recopilen informacion de los usuarios.</p>
+
+        <h2>2. Datos que recopila Mimir</h2>
+        <h3>2.1. Datos de actividad (captura automatica)</h3>
+        <p>Cuando el servicio de captura esta activo, Mimir registra localmente:</p>
+        <ul>
+          <li>Nombre de la ventana activa y aplicacion</li>
+          <li>Proyecto git y rama del directorio de trabajo</li>
+          <li>Estado de inactividad del sistema</li>
+          <li>Estado de audio y reuniones (deteccion de actividad, no contenido)</li>
+        </ul>
+        <p>Estos datos se almacenan exclusivamente en una base de datos SQLite en tu ordenador (<code>~/.config/mimir/daemon.db</code>). Nunca se transmiten a servidores externos de Mimir.</p>
+
+        <h3>2.2. Datos de configuracion</h3>
+        <p>Mimir almacena localmente tus preferencias, credenciales de integracion y configuracion de la aplicacion. Los tokens sensibles se guardan en el keyring del sistema operativo.</p>
+
+        <h2>3. Integraciones con terceros</h2>
+        <p>Mimir se conecta con servicios externos <strong>solo cuando tu lo configuras explicitamente</strong>. Cada integracion implica comunicacion directa entre tu ordenador y el servicio, sin intermediarios:</p>
+
+        <h3>3.1. Google Calendar</h3>
+        <ul>
+          <li><strong>Datos accedidos:</strong> eventos del calendario (solo lectura)</li>
+          <li><strong>Proposito:</strong> detectar reuniones para enriquecer los bloques de actividad</li>
+          <li><strong>Autorizacion:</strong> OAuth 2.0 con scope <code>calendar.readonly</code></li>
+          <li><strong>Tokens:</strong> almacenados localmente en <code>~/.config/mimir/google_tokens.json</code></li>
+          <li>Puedes revocar el acceso en cualquier momento desde la aplicacion o desde <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">tu cuenta de Google</a></li>
+        </ul>
+
+        <h3>3.2. Odoo</h3>
+        <ul>
+          <li><strong>Datos enviados:</strong> bloques de horas confirmados (descripcion, proyecto, tarea, duracion)</li>
+          <li><strong>Datos recibidos:</strong> proyectos, tareas, partes de horas, estado de fichaje</li>
+          <li><strong>Comunicacion:</strong> directa con tu instancia de Odoo mediante XMLRPC o REST API</li>
+        </ul>
+
+        <h3>3.3. GitLab y GitHub</h3>
+        <ul>
+          <li><strong>Datos recibidos:</strong> issues, merge requests/pull requests, comentarios, labels, notificaciones</li>
+          <li><strong>Comunicacion:</strong> directa con tu instancia de GitLab o con la API de GitHub</li>
+          <li><strong>Autenticacion:</strong> Personal Access Token o OAuth Device Flow (GitHub)</li>
+        </ul>
+
+        <h3>3.4. Proveedores de IA</h3>
+        <ul>
+          <li><strong>Datos enviados:</strong> contexto del bloque de actividad (aplicaciones usadas, proyecto, rama) para generar descripciones</li>
+          <li><strong>Proveedores soportados:</strong> Google Gemini, Anthropic Claude, OpenAI</li>
+          <li><strong>Nota:</strong> los datos enviados dependen del proveedor que configures. Consulta la politica de privacidad de cada proveedor</li>
+        </ul>
+
+        <h2>4. Datos que NO recopilamos</h2>
+        <ul>
+          <li>No recopilamos datos de uso ni telemetria</li>
+          <li>No rastreamos tu actividad fuera de la aplicacion</li>
+          <li>No almacenamos datos en servidores propios</li>
+          <li>No compartimos datos con terceros (excepto las integraciones que tu configuras)</li>
+          <li>No capturamos contenido de pantalla, pulsaciones de teclado ni contenido de archivos</li>
+        </ul>
+
+        <h2>5. Almacenamiento y seguridad</h2>
+        <ul>
+          <li>Todos los datos se almacenan localmente en tu ordenador</li>
+          <li>La base de datos SQLite se encuentra en <code>~/.config/mimir/</code></li>
+          <li>Los tokens sensibles se almacenan en el keyring del sistema operativo</li>
+          <li>La comunicacion con servicios externos utiliza HTTPS</li>
+          <li>Puedes eliminar todos tus datos borrando el directorio <code>~/.config/mimir/</code></li>
+        </ul>
+
+        <h2>6. Retencion de datos</h2>
+        <p>Mimir aplica politicas de retencion configurables:</p>
+        <ul>
+          <li>Señales de actividad: 180 dias por defecto</li>
+          <li>Bloques: 365 dias por defecto</li>
+          <li>Puedes modificar estos valores en la configuracion</li>
+          <li>Puedes eliminar datos manualmente en cualquier momento</li>
+        </ul>
+
+        <h2>7. Tus derechos</h2>
+        <p>Al ser una aplicacion local, tienes control total sobre tus datos:</p>
+        <ul>
+          <li><strong>Acceso:</strong> todos los datos estan en tu ordenador, accesibles directamente</li>
+          <li><strong>Eliminacion:</strong> borra <code>~/.config/mimir/</code> para eliminar todo</li>
+          <li><strong>Portabilidad:</strong> la base de datos SQLite es un formato estandar y abierto</li>
+          <li><strong>Revocacion:</strong> desconecta cualquier integracion desde la configuracion de Mimir</li>
+        </ul>
+
+        <h2>8. Cambios en esta politica</h2>
+        <p>Publicaremos cualquier cambio en esta pagina. Al ser una aplicacion de escritorio, las actualizaciones de la politica se reflejan con nuevas versiones de la aplicacion.</p>
+
+        <h2>9. Contacto</h2>
+        <p>Si tienes preguntas sobre esta politica de privacidad, contacta en <a href="mailto:jlorenzolimon@gmail.com">jlorenzolimon@gmail.com</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <span class="footer-logo">Mimir</span>
+        <span class="footer-copy">Jesus Lorenzo Limon</span>
+      </div>
+      <div class="footer-links">
+        <a href="/">Inicio</a>
+        <a href="privacy.html">Privacidad</a>
+        <a href="terms.html">Condiciones</a>
+        <a href="mailto:jlorenzolimon@gmail.com">Contacto</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
